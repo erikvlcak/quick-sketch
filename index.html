@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drawing Board</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Single+Day&display=swap');
+    </style>
+    <link rel="stylesheet" href="style.css">
+    <script src="./script.js" defer></script>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body>
+    <!-- <div id="Content" class="display-grid">
+
+        <div id="header">Drawing board</div>
+
+
+        <div id="sizeNumbers">Set dimensions</div>
+        <div id="sizeSlider">Slider</div>
+
+
+
+        <div id="colorTitle">Color modes</div>
+        <div id="colorPick">Choose color</div>
+        <div id="colorRandom">Rainbow mode</div>
+
+
+
+        <div id="shadingTitle">Shading styles</div>
+        <div id="shadingDarker">Darken</div>
+        <div id="shadingLighter">Lighten</div>
+
+
+
+
+        <div id="methodTitle">Drawing method</div>
+        <div id="methodDrag">Click-and-drag</div>
+        <div id="methodHover">Hover</div>
+
+
+
+
+        <div id="deleteTitle">Deleting modes</div>
+        <div id="deleteEraser">Eraser tool</div>
+        <div id="deleteClear">Clear all</div>
+
+
+
+        <div id="board"></div>
+
+    </div> -->
+
+    <div id="sidebar">
+        <div class="logo">
+            <i class='bx bx-pencil'></i>
+            <span class="logoName">Quick Sketch</span>
+        </div>
+
+        <ul class="optionsList">
+
+            <li class="option_size">
+                <i class='bx bx-expand-alt icon'></i>
+                <span class="option_size-value">20 x 20</span>
+                <span class="text">Adjust canvas size</span>
+                <input type="range">
+            </li>
+
+            <li class="option_color">
+                <i class='bx bx-palette icon'></i>
+                <span class="text">Coloring mode select</span>
+                <i class='bx bx-chevron-down arrow'></i>
+            </li>
+
+            <li class="option_shading">
+                <i class='bx bx-adjust icon'></i>
+                <span class="text">Shading mode select</span>
+                <i class='bx bx-chevron-down arrow'></i>
+            </li>
+
+            <li class="option_input">
+                <i class='bx bxs-paint icon'></i>
+                <span class="text">Input type select</span>
+                <i class='bx bx-chevron-down arrow'></i>
+            </li>
+
+            <li class="option_delete">
+                <i class='bx bx-eraser icon'></i>
+                <span class="text">Deletion mode</span>
+                <i class='bx bx-chevron-down arrow'></i>
+            </li>
+        </ul>
+    </div>
+
+
+</body>
+
+</html>
