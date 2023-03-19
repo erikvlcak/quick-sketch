@@ -15,73 +15,77 @@
 </head>
 
 <body>
+    <div id="content">
+        <div id="sidebar">
+            <div class="logo">
+                <i class='bx bx-pencil bx-flip-horizontal '></i>
+                <span class="logoName">Quick Sketch</span>
 
-    <div id="sidebar">
-        <div class="logo">
-            <i class='bx bx-pencil bx-spin bx-flip-horizontal'></i>
-            <span class="logoName">Quick Sketch</span>
+            </div>
 
+            <ul class="optionsList">
+
+                <li class="option_size">
+                    <i class='bx bx-expand-alt icon'></i>
+                    <span class="text">Adjust canvas size</span>
+                    <i class='bx bx-chevron-down arrow'></i>
+                    <ul class="subOptions display-none">
+                        <span class="option_size-value">Use slider</span>
+                        <input type="range" class="range" id="range" min="2" max="64">
+                    </ul>
+                </li>
+
+                <li class="option_color">
+                    <i class='bx bx-palette icon'></i>
+                    <span class="text">Coloring mode</span>
+                    <i class='bx bx-chevron-down arrow'></i>
+                    <ul class="subOptions display-none">
+                        <li class="">Pick specific color</li>
+                        <li class="">Paint with random color</li>
+                        <li class="">Rainbow mode!</li>
+                    </ul>
+                </li>
+
+
+                <li class="option_shading">
+                    <i class='bx bx-adjust icon'></i>
+                    <span class="text">Shading technique</span>
+                    <i class='bx bx-chevron-down arrow'></i>
+                    <ul class="subOptions display-none">
+                        <li class="">Progressively darker</li>
+                        <li class="">Progressively lighter</li>
+                        <li class="">None</li>
+                    </ul>
+                </li>
+
+
+                <li class="option_input">
+                    <i class='bx bxs-paint icon'></i>
+                    <span class="text">Input style</span>
+                    <i class='bx bx-chevron-down arrow'></i>
+                    <ul class="subOptions display-none">
+                        <li class="">Click and drag</li>
+                        <li class="">Hover over canvas</li>
+                    </ul>
+                </li>
+
+
+                <li class="option_delete">
+                    <i class='bx bx-eraser icon'></i>
+                    <span class="text">Deletion mode</span>
+                    <i class='bx bx-chevron-down arrow'></i>
+                    <ul class="subOptions display-none">
+                        <li class="">Eraser tool</li>
+                        <li class="">Clear canvas</li>
+                    </ul>
+                </li>
+
+            </ul>
         </div>
-
-        <ul class="optionsList">
-
-            <li class="option_size">
-                <i class='bx bx-expand-alt icon'></i>
-                <span class="text">Adjust canvas size</span>
-                <i class='bx bx-chevron-down arrow'></i>
-                <ul class="subOptions display-none">
-                    <span class="option_size-value">Use slider</span>
-                    <input type="range" class="range" id="range" min="2" max="64">
-                </ul>
-            </li>
-
-            <li class="option_color">
-                <i class='bx bx-palette icon'></i>
-                <span class="text">Coloring mode select</span>
-                <i class='bx bx-chevron-down arrow'></i>
-                <ul class="subOptions display-none">
-                    <li class="">Pick specific color</li>
-                    <li class="">Paint with random color</li>
-                    <li class="">Rainbow mode!</li>
-                </ul>
-            </li>
-
-
-            <li class="option_shading">
-                <i class='bx bx-adjust icon'></i>
-                <span class="text">Shading mode select</span>
-                <i class='bx bx-chevron-down arrow'></i>
-                <ul class="subOptions display-none">
-                    <li class="">Progressively darker</li>
-                    <li class="">Progressively lighter</li>
-                </ul>
-            </li>
-
-
-            <li class="option_input">
-                <i class='bx bxs-paint icon'></i>
-                <span class="text">Input type select</span>
-                <i class='bx bx-chevron-down arrow'></i>
-                <ul class="subOptions display-none">
-                    <li class="">Click and drag</li>
-                    <li class="">Hover over canvas</li>
-                </ul>
-            </li>
-
-
-            <li class="option_delete">
-                <i class='bx bx-eraser icon'></i>
-                <span class="text">Deletion mode</span>
-                <i class='bx bx-chevron-down arrow'></i>
-                <ul class="subOptions display-none">
-                    <li class="">Eraser tool</li>
-                    <li class="">Clear canvas</li>
-                </ul>
-            </li>
-
-        </ul>
+        <div id="canvas">
+            set me as fr so i change size when window changes size
+        </div>
     </div>
-
 
 </body>
 
