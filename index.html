@@ -15,10 +15,12 @@
 </head>
 
 <body>
+
     <div id="sidebar">
         <div class="logo">
-            <i class='bx bx-pencil'></i>
+            <i class='bx bx-pencil bx-spin bx-flip-horizontal'></i>
             <span class="logoName">Quick Sketch</span>
+
         </div>
 
         <ul class="optionsList">
@@ -27,9 +29,9 @@
                 <i class='bx bx-expand-alt icon'></i>
                 <span class="text">Adjust canvas size</span>
                 <i class='bx bx-chevron-down arrow'></i>
-                <ul class="subOptions">
-                    <span class="option_size-value">20 x 20</span>
-                    <input type="range">
+                <ul class="subOptions display-none">
+                    <span class="option_size-value">Use slider</span>
+                    <input type="range" class="range" id="range" min="2" max="64">
                 </ul>
             </li>
 
@@ -37,7 +39,7 @@
                 <i class='bx bx-palette icon'></i>
                 <span class="text">Coloring mode select</span>
                 <i class='bx bx-chevron-down arrow'></i>
-                <ul class="subOptions">
+                <ul class="subOptions display-none">
                     <li class="">Pick specific color</li>
                     <li class="">Paint with random color</li>
                     <li class="">Rainbow mode!</li>
@@ -49,7 +51,7 @@
                 <i class='bx bx-adjust icon'></i>
                 <span class="text">Shading mode select</span>
                 <i class='bx bx-chevron-down arrow'></i>
-                <ul class="subOptions">
+                <ul class="subOptions display-none">
                     <li class="">Progressively darker</li>
                     <li class="">Progressively lighter</li>
                 </ul>
@@ -60,7 +62,7 @@
                 <i class='bx bxs-paint icon'></i>
                 <span class="text">Input type select</span>
                 <i class='bx bx-chevron-down arrow'></i>
-                <ul class="subOptions">
+                <ul class="subOptions display-none">
                     <li class="">Click and drag</li>
                     <li class="">Hover over canvas</li>
                 </ul>
@@ -71,7 +73,7 @@
                 <i class='bx bx-eraser icon'></i>
                 <span class="text">Deletion mode</span>
                 <i class='bx bx-chevron-down arrow'></i>
-                <ul class="subOptions">
+                <ul class="subOptions display-none">
                     <li class="">Eraser tool</li>
                     <li class="">Clear canvas</li>
                 </ul>
