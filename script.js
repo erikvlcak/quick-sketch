@@ -1,37 +1,33 @@
+Swatchy();
+
 let optionsList = document.querySelectorAll('.optionsList li');
 let subOptionsList = document.querySelectorAll('.optionsList li .subOptions');
 let range = document.querySelector('#range');
 let canvas = document.querySelector('#canvas');
-let pixel = document.querySelectorAll
+let pixel = document.querySelectorAll('.pixel');
+let colorSubOptions = document.querySelector('.optionsList .option_color .subOptions');
 
-
+//change canvas size according to slider and create canvasSize property
 range.addEventListener('input', (e) => {
     document.querySelector('.option_size-value').textContent = `${e.target.value} x ${e.target.value}`;
     canvasSize = e.target.value;
-
-
 })
 
-range.addEventListener('click', (e) => {
-    console.log(e.target);
-    console.log(canvasSize);
 
+//generate Canvas with set mesh density
+range.addEventListener('click', (e) => {
     while (canvas.hasChildNodes()) {
         canvas.removeChild(canvas.lastChild);
     };
-
     canvas.style.gridTemplateColumns = 'repeat(' + canvasSize + ', minmax(auto, 1fr))';
-
     for (let i = 0; i < (canvasSize * canvasSize); i++) {
         let pixel = document.createElement('div');
         pixel.classList.add('pixel');
-
-
-
         canvas.appendChild(pixel);
     }
 })
 
+//display or hide subOptions after click on optionList item
 optionsList.forEach((item) => {
     item.addEventListener('click', (e) => {
         if ((e.target.tagName == 'INPUT') || (e.target.tagName == 'LI')) {
@@ -41,7 +37,6 @@ optionsList.forEach((item) => {
                 showSubOptionsClickListItem(e);
             }
         }
-
         else if (e.target.tagName != 'INPUT') {
             if (e.target.parentElement.querySelector('.arrow').classList.contains('bx-rotate-180')) {
                 hideSubOptionsClickList(e);
@@ -52,22 +47,48 @@ optionsList.forEach((item) => {
     })
 });
 
+//hide subOptions after mouse moves away
 document.addEventListener('mouseover', (e) => {
     hideSubOptionsMouseOut(e);
 });
 
+//pencil spin
 document.querySelector('.bx-pencil').addEventListener('click', (e) => {
     e.target.classList.toggle('bx-spin');
 });
 
+//mouseover painting
 
+// canvas.addEventListener('mouseover', (e) => {
+//     if (e.target.className == 'pixel') {
+//         e.target.style.backgroundColor = 'black';
+//     }
+// })
 
+//click and drag painting
+let mouseDrag = false;
+canvas.addEventListener('mousedown', () => {
+    mouseDrag = true;
+})
 
+canvas.addEventListener('mouseup', () => {
+    mouseDrag = false;
+})
 
+canvas.addEventListener('mousemove', (e) => {
+    if (mouseDrag) {
+        if (e.target.className == 'pixel') {
+            e.target.style.backgroundColor = 'black';
+        }
+    }
+})
 
-
-
-
+colorSubOptions.addEventListener('click', (e) => {
+    console.log(e.target);
+    if (e.target.className == 'subOptionPickColor') {
+        canvas.querySelector('input').classList.toggle('display-none');
+    }
+})
 
 
 
