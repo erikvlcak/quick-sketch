@@ -22,7 +22,9 @@ document.addEventListener('mouseover', (e) => {
     hideSubOptionsMouseOut(e);
 });
 
-
+document.querySelector('.bx-pencil').addEventListener('click', (e) => {
+    e.target.classList.toggle('bx-spin');
+})
 
 
 
