@@ -109,12 +109,11 @@ body {
     height: 150px;
     position: absolute;
     background-color: red;
-    left: 27.5px;
+    left: 242px;
     top: 0px;
     border-radius: 0px 13px 13px 0px;
     background-color: rgb(65, 68, 148);
     cursor: default;
-    display: grid;
     grid-template: repeat(3, 40px) / repeat(5, 40px);
     place-content: center;
     gap: 7px;
@@ -148,13 +147,14 @@ body {
 }
 
 
-.display-none {
+.hidden,
+.sub-hidden {
     display: none;
 }
 
-.display-grid {
+.displayed,
+.sub-displayed {
     display: grid;
-
 }
 
 #sidebar .optionsList .subOptions {

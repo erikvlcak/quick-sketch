@@ -30,7 +30,7 @@
                     <i class='bx bx-expand-alt icon'></i>
                     <span class="text">Adjust canvas size</span>
                     <i class='bx bx-chevron-down arrow'></i>
-                    <ul class="subOptions display-none">
+                    <ul class="subOptions sub-hidden">
                         <span class="option_size-value">Use slider</span>
                         <input type="range" class="range" id="range" min="2" max="100">
                     </ul>
@@ -40,27 +40,27 @@
                     <i class='bx bx-palette icon'></i>
                     <span class="text">Painting color</span>
                     <i class='bx bx-chevron-down arrow'></i>
-                    <ul class="subOptions display-none">
-                        <li class="subOptionPickColor">Pick color<i class='bx bx-chevron-right arrow'>
-                                <div class="colors">
-                                    <div class="white"></div>
-                                    <div class="silver"></div>
-                                    <div class="black"></div>
-                                    <div class="red"></div>
-                                    <div class="maroon"></div>
-                                    <div class="yellow"></div>
-                                    <div class="olive"></div>
-                                    <div class="lime"></div>
-                                    <div class="green"></div>
-                                    <div class="aqua"></div>
-                                    <div class="teal"></div>
-                                    <div class="blue"></div>
-                                    <div class="navy"></div>
-                                    <div class="fuchsia"></div>
-                                    <div class="purple"></div>
-                                </div>
-                            </i>
+                    <ul class="subOptions sub-hidden">
+                        <li class="subOptionPickColor">Pick color
+                            <div class="colors sub-hidden">
+                                <div class="white"></div>
+                                <div class="silver"></div>
+                                <div class="black"></div>
+                                <div class="red"></div>
+                                <div class="maroon"></div>
+                                <div class="yellow"></div>
+                                <div class="olive"></div>
+                                <div class="lime"></div>
+                                <div class="green"></div>
+                                <div class="aqua"></div>
+                                <div class="teal"></div>
+                                <div class="blue"></div>
+                                <div class="navy"></div>
+                                <div class="fuchsia"></div>
+                                <div class="purple"></div>
+                            </div>
                         </li>
+
 
                         <li class="subOptionRandomColor">Random color</li>
                         <li class="subOptionRainbow">Rainbow mode!</li>
@@ -73,7 +73,7 @@
                     <i class='bx bx-adjust icon'></i>
                     <span class="text">Shading technique</span>
                     <i class='bx bx-chevron-down arrow'></i>
-                    <ul class="subOptions display-none">
+                    <ul class="subOptions sub-hidden">
                         <li class="subOptionDarker">Progressively darker</li>
                         <li class="subOptionLighter">Progressively lighter</li>
                         <li class="subOptionShadingNone">None</li>
@@ -85,7 +85,7 @@
                     <i class='bx bxs-paint icon'></i>
                     <span class="text">Input style</span>
                     <i class='bx bx-chevron-down arrow'></i>
-                    <ul class="subOptions display-none">
+                    <ul class="subOptions sub-hidden">
                         <li class="subOptionHover">Hover over canvas</li>
                         <li class="subOptionDrag">Click and drag</li>
                     </ul>
@@ -96,7 +96,7 @@
                     <i class='bx bx-eraser icon'></i>
                     <span class="text">Deletion mode</span>
                     <i class='bx bx-chevron-down arrow'></i>
-                    <ul class="subOptions display-none">
+                    <ul class="subOptions sub-hidden">
                         <li class="subOptionEraser">Eraser tool</li>
                         <li class="subOptionClear">Clear canvas</li>
                     </ul>
@@ -106,9 +106,6 @@
         </div>
         <div id="canvas">
             <div class="canvasInitialMessage">Start by setting canvas size.</div>
-            <!-- <div>
-                <input type="text" id="colorPicker" data-coloris>
-            </div> -->
         </div>
     </div>
 
