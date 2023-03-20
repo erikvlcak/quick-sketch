@@ -1,11 +1,21 @@
-Swatchy();
-
 let optionsList = document.querySelectorAll('.optionsList li');
-let subOptionsList = document.querySelectorAll('.optionsList li .subOptions');
 let range = document.querySelector('#range');
 let canvas = document.querySelector('#canvas');
 let pixel = document.querySelectorAll('.pixel');
-let colorSubOptions = document.querySelector('.optionsList .option_color .subOptions');
+let pickColor = document.querySelector('.optionsList .option_color .subOptionPickColor');
+
+pickColor.addEventListener('mouseenter', (e) => {
+    e.target.querySelector('.colors').classList.toggle('sub-displayed');
+})
+
+pickColor.addEventListener('mouseleave', (e) => {
+    e.target.querySelector('.colors').classList.toggle('sub-displayed');
+})
+
+
+
+
+
 
 //change canvas size according to slider and create canvasSize property
 range.addEventListener('input', (e) => {
@@ -30,26 +40,31 @@ range.addEventListener('click', (e) => {
 //display or hide subOptions after click on optionList item
 optionsList.forEach((item) => {
     item.addEventListener('click', (e) => {
-        if ((e.target.tagName == 'INPUT') || (e.target.tagName == 'LI')) {
-            if (e.target.parentElement.parentElement.querySelector('.arrow').classList.contains('bx-rotate-180')) {
-                hideSubOptionsClickListItem(e);
+
+        if ((e.target.classList.contains('icon')) || (e.target.classList.contains('text')) || (e.target.classList.contains('arrow'))) {
+            console.log('klikol si na option');
+            if (e.target.parentElement.querySelector('.subOptions').classList.contains('sub-hidden')) {
+                e.target.parentElement.querySelector('.subOptions').classList.replace('sub-hidden', 'sub-displayed');
+                e.target.parentElement.querySelector('.arrow').classList.add('bx-rotate-180');
             } else {
-                showSubOptionsClickListItem(e);
+                e.target.parentElement.querySelector('.subOptions').classList.replace('sub-displayed', 'sub-hidden');
+                e.target.parentElement.querySelector('.arrow').classList.remove('bx-rotate-180');
             }
-        }
-        else if (e.target.tagName != 'INPUT') {
-            if (e.target.parentElement.querySelector('.arrow').classList.contains('bx-rotate-180')) {
-                hideSubOptionsClickList(e);
-            } else {
-                showSubOptionsClickList(e);
-            }
+        } else if (((e.target.tagName == 'LI') || (e.target.tagName == 'INPUT')) && (e.target.className != 'subOptionPickColor')) {
+            e.target.parentElement.parentElement.querySelector('.subOptions').classList.replace('sub-displayed', 'sub-hidden');
+            e.target.parentElement.parentElement.querySelector('.arrow').classList.remove('bx-rotate-180');
         }
     })
 });
 
 //hide subOptions after mouse moves away
 document.addEventListener('mouseover', (e) => {
-    hideSubOptionsMouseOut(e);
+    if ((e.target.id == 'content') || (e.target.id == 'canvas') || (e.target.className == 'pixel') || (e.target.className == 'optionsList')) {
+        document.querySelectorAll('.sub-displayed').forEach((item) => {
+            item.classList.replace('sub-displayed', 'sub-hidden');
+            item.parentElement.querySelector('.arrow').classList.remove('bx-rotate-180');
+        })
+    }
 });
 
 //pencil spin
@@ -83,57 +98,3 @@ canvas.addEventListener('mousemove', (e) => {
     }
 })
 
-colorSubOptions.addEventListener('click', (e) => {
-    console.log(e.target);
-    if (e.target.className == 'subOptionPickColor') {
-        canvas.querySelector('input').classList.toggle('display-none');
-    }
-})
-
-
-
-
-
-function showSubOptionsClickList(e) {
-    e.target.parentElement.querySelector('.arrow').classList.add('bx-rotate-180');
-    e.target.parentElement.querySelector('.subOptions').classList.replace('display-none', 'display-grid');
-    e.target.parentElement.querySelector('.subOptions').style.opacity = 1;
-    e.target.parentElement.querySelector('.subOptions').style.pointerEvents = 'initial';
-    e.target.parentElement.classList.toggle('visible');
-}
-
-function hideSubOptionsClickList(e) {
-    e.target.parentElement.querySelector('.arrow').classList.remove('bx-rotate-180');
-    e.target.parentElement.querySelector('.subOptions').classList.replace('display-grid', 'display-none');
-    e.target.parentElement.querySelector('.subOptions').style.opacity = 0;
-    e.target.parentElement.querySelector('.subOptions').style.pointerEvents = 'none';
-    e.target.parentElement.classList.toggle('visible');
-}
-
-function showSubOptionsClickListItem(e) {
-    e.target.parentElement.parentElement.querySelector('.arrow').classList.add('bx-rotate-180');
-    e.target.parentElement.parentElement.querySelector('.subOptions').classList.replace('display-none', 'display-grid');
-    e.target.parentElement.parentElement.querySelector('.subOptions').style.opacity = 1;
-    e.target.parentElement.parentElement.querySelector('.subOptions').style.pointerEvents = 'initial';
-    e.target.parentElement.parentElement.classList.toggle('visible');
-}
-
-function hideSubOptionsClickListItem(e) {
-    e.target.parentElement.parentElement.querySelector('.arrow').classList.remove('bx-rotate-180');
-    e.target.parentElement.parentElement.querySelector('.subOptions').classList.replace('display-grid', 'display-none');
-    e.target.parentElement.parentElement.querySelector('.subOptions').style.opacity = 0;
-    e.target.parentElement.parentElement.querySelector('.subOptions').style.pointerEvents = 'none';
-    e.target.parentElement.parentElement.classList.toggle('visible');
-}
-
-function hideSubOptionsMouseOut(e) {
-    if ((e.target.id == 'content') || (e.target.id == 'canvas') || (e.target.className == 'optionsList')) {
-        document.querySelectorAll('.visible').forEach((item) => {
-            item.querySelector('.arrow').classList.remove('bx-rotate-180');
-            item.querySelector('.subOptions').classList.replace('display-grid', 'display-none');
-            item.querySelector('.subOptions').style.opacity = 0;
-            item.querySelector('.subOptions').style.pointerEvents = 'none';
-            item.classList.toggle('visible');
-        })
-    }
-}
