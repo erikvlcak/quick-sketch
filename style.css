@@ -15,6 +15,7 @@ body {
     margin: 0px;
     padding: 0px;
     user-select: none;
+    position: relative;
 }
 
 #content {
@@ -80,8 +81,8 @@ body {
     grid-template-columns: auto 1fr min-content;
     height: 50px;
     transition: all 0.4s ease;
-
 }
+
 
 #sidebar .optionsList li:hover {
     background-color: rgb(40, 43, 91);
@@ -89,11 +90,39 @@ body {
 }
 
 #sidebar .optionsList li .arrow {
-    margin-left: auto;
+    /* margin-left: auto; */
     grid-column: 3;
     align-items: center;
     height: 100%;
     display: flex;
+}
+
+
+#sidebar .optionsList .subOptionPickColor {
+    display: grid;
+    grid-template-columns: 1fr min-content;
+    place-items: center;
+}
+
+#sidebar .optionsList .subOptionPickColor .colors {
+    width: 250px;
+    height: 150px;
+    position: absolute;
+    background-color: red;
+    left: 27.5px;
+    top: 0px;
+    border-radius: 0px 13px 13px 0px;
+    background-color: rgb(65, 68, 148);
+    cursor: default;
+    display: grid;
+    grid-template: repeat(3, 40px) / repeat(5, 40px);
+    place-content: center;
+    gap: 7px;
+}
+
+#sidebar .optionsList .subOptionPickColor .arrow {
+    position: absolute;
+    margin-left: -30px;
 }
 
 #sidebar .optionsList .icon {
@@ -109,7 +138,7 @@ body {
 }
 
 #sidebar .optionsList span {
-    font-size: 26px;
+    font-size: 30px;
     font-weight: 400;
     color: white;
     align-items: center;
@@ -141,7 +170,8 @@ body {
 }
 
 #sidebar .subOptions li {
-    font-size: 22px;
+    margin: 5px 0px 5px 0px;
+    font-size: 25px;
     font-weight: 400;
     color: rgb(255, 255, 255);
     width: 100%;
@@ -178,6 +208,7 @@ body {
     grid-auto-flow: row;
     grid-auto-rows: auto;
     position: relative;
+    box-shadow: 0px 0px 15px gray;
 }
 
 .pixel {
@@ -187,4 +218,71 @@ body {
 .canvasInitialMessage {
     place-self: center;
     font-size: 40px;
+}
+
+#sidebar .optionsList .option_color .colors .white {
+    background-color: white;
+}
+
+#sidebar .optionsList .option_color .colors .silver {
+    background-color: silver;
+}
+
+#sidebar .optionsList .option_color .colors .black {
+    background-color: black;
+}
+
+#sidebar .optionsList .option_color .colors .red {
+    background-color: red;
+}
+
+#sidebar .optionsList .option_color .colors .maroon {
+    background-color: maroon;
+}
+
+#sidebar .optionsList .option_color .colors .yellow {
+    background-color: yellow;
+}
+
+#sidebar .optionsList .option_color .colors .olive {
+    background-color: olive;
+}
+
+#sidebar .optionsList .option_color .colors .lime {
+    background-color: lime;
+}
+
+#sidebar .optionsList .option_color .colors .green {
+    background-color: green;
+}
+
+#sidebar .optionsList .option_color .colors .aqua {
+    background-color: aqua;
+}
+
+#sidebar .optionsList .option_color .colors .teal {
+    background-color: teal;
+}
+
+#sidebar .optionsList .option_color .colors .blue {
+    background-color: blue;
+}
+
+#sidebar .optionsList .option_color .colors .navy {
+    background-color: navy;
+}
+
+
+#sidebar .optionsList .option_color .colors .fuchsia {
+    background-color: fuchsia;
+}
+
+#sidebar .optionsList .option_color .colors .purple {
+    background-color: purple
+}
+
+.colors div {
+    border: rgba(255, 255, 255, 0.534) solid 1px;
+    border-radius: 50%;
+    cursor: pointer;
 }

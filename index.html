@@ -13,8 +13,6 @@
     <script src="./script.js" defer></script>
     <!-- icons -->
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <script src="swatchy.js"></script>
-    <link rel="stylesheet" href="swatchy.css" />
 </head>
 
 <body>
@@ -43,11 +41,32 @@
                     <span class="text">Painting color</span>
                     <i class='bx bx-chevron-down arrow'></i>
                     <ul class="subOptions display-none">
-                        <li class="subOptionPickColor">Pick specific color</li>
-                        <li class="subOptionRandomColor">Paint with random color</li>
+                        <li class="subOptionPickColor">Pick color<i class='bx bx-chevron-right arrow'>
+                                <div class="colors">
+                                    <div class="white"></div>
+                                    <div class="silver"></div>
+                                    <div class="black"></div>
+                                    <div class="red"></div>
+                                    <div class="maroon"></div>
+                                    <div class="yellow"></div>
+                                    <div class="olive"></div>
+                                    <div class="lime"></div>
+                                    <div class="green"></div>
+                                    <div class="aqua"></div>
+                                    <div class="teal"></div>
+                                    <div class="blue"></div>
+                                    <div class="navy"></div>
+                                    <div class="fuchsia"></div>
+                                    <div class="purple"></div>
+                                </div>
+                            </i>
+                        </li>
+
+                        <li class="subOptionRandomColor">Random color</li>
                         <li class="subOptionRainbow">Rainbow mode!</li>
                     </ul>
                 </li>
+
 
 
                 <li class="option_shading">
@@ -67,8 +86,8 @@
                     <span class="text">Input style</span>
                     <i class='bx bx-chevron-down arrow'></i>
                     <ul class="subOptions display-none">
-                        <li class="subOptionDrag">Click and drag</li>
                         <li class="subOptionHover">Hover over canvas</li>
+                        <li class="subOptionDrag">Click and drag</li>
                     </ul>
                 </li>
 
