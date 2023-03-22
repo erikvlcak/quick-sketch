@@ -109,7 +109,7 @@ body {
     height: 150px;
     position: absolute;
     background-color: red;
-    left: 242px;
+    left: 230px;
     top: 0px;
     border-radius: 0px 13px 13px 0px;
     background-color: rgb(65, 68, 148);
@@ -203,12 +203,13 @@ body {
 
 #canvas {
     display: grid;
-    border: 2px solid black;
+    border: 8px solid transparent;
+    border-color: black;
     grid-area: 2/2/3/3;
     grid-auto-flow: row;
     grid-auto-rows: auto;
     position: relative;
-    box-shadow: 0px 0px 15px gray;
+    box-shadow: 0px 0px 30px rgba(128, 128, 128, 0.79);
 }
 
 .pixel {
@@ -216,12 +217,15 @@ body {
 }
 
 .canvasInitialMessage {
-    place-self: center;
+    align-items: center;
+    justify-content: center;
     font-size: 40px;
+    display: flex;
+    text-align: center;
 }
 
-#sidebar .optionsList .option_color .colors .white {
-    background-color: white;
+#sidebar .optionsList .option_color .colors .violet {
+    background-color: violet;
 }
 
 #sidebar .optionsList .option_color .colors .silver {
@@ -244,8 +248,8 @@ body {
     background-color: yellow;
 }
 
-#sidebar .optionsList .option_color .colors .olive {
-    background-color: olive;
+#sidebar .optionsList .option_color .colors .orange {
+    background-color: orange;
 }
 
 #sidebar .optionsList .option_color .colors .lime {
