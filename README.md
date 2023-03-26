@@ -10,12 +10,13 @@ Main Features:
 
 Main goals:
 - Effective combination of Flexbox and Grid layouts.
-- First attempt to create interactive navigation bar.
+- First attempt to create interactive navigation bar and learn how to use absolute positioning.
 - Gain more experience with the use of different Event Listeners.
 - Keeping code as clean as possible, which was crucial since this app does quiet a lot of different, but often overlaping things.
 - Keeping the desing very minimalistic and functionality easy to understand.
+- Import Web Icons from boxicons
 
-This project was made as a part [The Odin Project](https://www.theodinproject.com/lessons/foundations-rock-paper-scissors)  curriculum.
+This project was made as a part [The Odin Project](https://www.theodinproject.com/lessons/foundations-etch-a-sketch)  curriculum.
 
 Have fun and feel free to leave feedback.
 
