@@ -16,7 +16,7 @@ Main goals:
 - Keeping the desing very minimalistic and functionality easy to understand.
 - Import Web Icons from boxicons
 
-This project was made as a part [The Odin Project](https://www.theodinproject.com/lessons/foundations-rock-paper-scissors)  curriculum.
+This project was made as a part [The Odin Project](https://www.theodinproject.com/lessons/foundations-etch-a-sketch)  curriculum.
 
 Have fun and feel free to leave feedback.
 
