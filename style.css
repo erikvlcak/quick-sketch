@@ -83,7 +83,6 @@ body {
     transition: all 0.4s ease;
 }
 
-
 #sidebar .optionsList li:hover {
     background-color: rgb(40, 43, 91);
     cursor: pointer;
@@ -96,7 +95,6 @@ body {
     height: 100%;
     display: flex;
 }
-
 
 #sidebar .optionsList .subOptionPickColor {
     display: grid;
@@ -145,7 +143,6 @@ body {
     display: flex;
     padding: 0px 10px 0px 10px;
 }
-
 
 .hidden,
 .sub-hidden {
@@ -203,8 +200,9 @@ body {
 
 #canvas {
     display: grid;
-    border: 8px solid transparent;
+    border: 10px solid transparent;
     border-color: black;
+    border-radius: 15px;
     grid-area: 2/2/3/3;
     grid-auto-flow: row;
     grid-auto-rows: auto;
@@ -220,69 +218,94 @@ body {
     align-items: center;
     justify-content: center;
     font-size: 40px;
-    display: flex;
+    display: grid;
+    grid-template-rows: 1fr min-content;
     text-align: center;
 }
 
+.footer {
+    text-decoration: none;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+
+a {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    color: black;
+}
+
+.bx-pencil {
+    cursor: pointer;
+}
+
+.underline {
+    text-decoration: underline;
+}
+
 #sidebar .optionsList .option_color .colors .violet {
-    background-color: violet;
+    background-color: hsl(300, 76%, 72%);
 }
 
 #sidebar .optionsList .option_color .colors .silver {
-    background-color: silver;
+    background-color: hsl(0, 0%, 75%);
 }
 
 #sidebar .optionsList .option_color .colors .black {
-    background-color: black;
+    background-color: hsl(0, 0%, 0%);
 }
 
 #sidebar .optionsList .option_color .colors .red {
-    background-color: red;
+    background-color: hsl(0, 100%, 50%);
 }
 
 #sidebar .optionsList .option_color .colors .maroon {
-    background-color: maroon;
+    background-color: hsl(0, 100%, 25%);
 }
 
 #sidebar .optionsList .option_color .colors .yellow {
-    background-color: yellow;
+    background-color: hsl(60, 100%, 50%);
 }
 
 #sidebar .optionsList .option_color .colors .orange {
-    background-color: orange;
+    background-color: hsl(39, 100%, 50%);
 }
 
 #sidebar .optionsList .option_color .colors .lime {
-    background-color: lime;
+    background-color: hsl(120, 100%, 50%);
 }
 
 #sidebar .optionsList .option_color .colors .green {
-    background-color: green;
+    background-color: hsl(120, 100%, 25%);
 }
 
 #sidebar .optionsList .option_color .colors .aqua {
-    background-color: aqua;
+    background-color: hsl(180, 100%, 50%);
 }
 
 #sidebar .optionsList .option_color .colors .teal {
-    background-color: teal;
+    background-color: hsl(180, 100%, 25%);
 }
 
 #sidebar .optionsList .option_color .colors .blue {
-    background-color: blue;
+    background-color: hsl(240, 100%, 50%);
 }
 
 #sidebar .optionsList .option_color .colors .navy {
-    background-color: navy;
+    background-color: hsl(240, 100%, 25%);
 }
 
 
 #sidebar .optionsList .option_color .colors .fuchsia {
-    background-color: fuchsia;
+    background-color: hsl(300, 100%, 50%);
 }
 
 #sidebar .optionsList .option_color .colors .purple {
-    background-color: purple
+    background-color: hsl(300, 100%, 25%);
 }
 
 .colors div {
