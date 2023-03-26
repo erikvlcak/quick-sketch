@@ -24,7 +24,7 @@ pickColor.addEventListener('mouseleave', (e) => {
 
 //coloring modes
 paintingColorList.addEventListener('click', (e) => {
-    shadingOption = null;
+
     if (colorOption != 'rainbow') {
         document.querySelectorAll('.option_shading').forEach((item) => {
             item.style.opacity = '1';
@@ -101,17 +101,33 @@ canvas.addEventListener('mouseover', (e) => {
 shading.addEventListener('click', (e) => {
 
 
-    if (e.target.className == 'subOptionDarker') {
-        shadingOption = 'darker';
-        shading.querySelector('.subOptionDarker').style.textDecoration = 'underline';
-        shading.querySelector('.subOptionLighter').style.textDecoration = 'none';
+    if (e.target.classList.contains('subOptionDarker')) {
+        e.target.classList.toggle('underline');
+        if (e.target.classList.contains('underline')) {
+            shadingOption = 'darker';
+        } else {
+            // e.target.classList.toggle('underline');
+            shadingOption = null;
+        }
+        if (e.target.nextElementSibling.classList.contains('underline')) {
+            e.target.nextElementSibling.classList.remove('underline');
+        }
 
-    } else if (e.target.className == 'subOptionLighter') {
-        shadingOption = 'lighter';
-        shading.querySelector('.subOptionLighter').style.textDecoration = 'underline';
-        shading.querySelector('.subOptionDarker').style.textDecoration = 'none';
+    } else if (e.target.classList.contains('subOptionLighter')) {
+        e.target.classList.toggle('underline');
+        if (e.target.classList.contains('underline')) {
+            shadingOption = 'lighter';
+        } else {
+            // e.target.classList.toggle('underline');
+            shadingOption = null;
+        }
+        if (e.target.previousElementSibling.classList.contains('underline')) {
+            e.target.previousElementSibling.classList.remove('underline');
+        }
     }
-})
+    console.log(shadingOption);
+}
+);
 
 //deletion options
 deleting.addEventListener('click', (e) => {
