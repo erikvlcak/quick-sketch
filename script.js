@@ -77,11 +77,11 @@ canvas.addEventListener('mouseover', (e) => {
     else if (colorOption === null || colorOption == 'pick' || colorOption == 'random') {
         if ((mouseDrag) && (e.target.className == 'pixel')) {
             if (shadingOption == 'darker') {
-                colorLightness -= 0.05;
+                colorLightness -= 0.08;
                 chosenColor = 'hsl(' + chosenColorValue1 + ', ' + chosenColorValue2 + '%, ' + colorLightness + '%)';
                 console.log(chosenColor);
             } else if (shadingOption == 'lighter') {
-                colorLightness += 0.05;
+                colorLightness += 0.08;
                 chosenColor = 'hsl(' + chosenColorValue1 + ', ' + chosenColorValue2 + '%, ' + colorLightness + '%)';
                 console.log(chosenColor);
             }
