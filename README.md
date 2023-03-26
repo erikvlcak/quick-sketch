@@ -1,6 +1,7 @@
 # Quick Sketch
 
 Main Features:
+- Every interaction, except a few CSS hover effects, is managed by JS. HTML contains only basic DIVs.
 - Adjust canvas size (square mesh density) of your canvas from 2x2 to 100x100. Re-adjusting resets canvas to initial state (deletes your magnificent artwork!)
 - Start drawing immediately with black color, choose from pre-selected colors or let the app choose a completely random color.
 - Rainbow mode = colors are changing constantly as you draw.
@@ -9,7 +10,7 @@ Main Features:
 - Deletion options = Toggle eraser and erase your art pixel by pixel. Select "Clear" option to erase your whole drawing while keeping selected canvas size.
 
 Main goals:
-- Every interaction, except a few CSS hover effects, is managed by JS. HTML contains only basic DIVs.
+
 - Effective combination of Flexbox and Grid layouts.
 - First attempt to create interactive navigation bar and learn how to use absolute positioning.
 - Gain more experience with the use of different Event Listeners.
