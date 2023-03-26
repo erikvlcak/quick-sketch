@@ -9,6 +9,7 @@ Main Features:
 - Deletion options = Toggle eraser and erase your art pixel by pixel. Select "Clear" option to erase your whole drawing while keeping selected canvas size.
 
 Main goals:
+- Every interaction, except a few CSS hover effects, is managed by JS. HTML contains only basic DIVs.
 - Effective combination of Flexbox and Grid layouts.
 - First attempt to create interactive navigation bar and learn how to use absolute positioning.
 - Gain more experience with the use of different Event Listeners.
