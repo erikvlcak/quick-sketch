@@ -1,4 +1,4 @@
-#Quick Sketch
+# Quick Sketch
 
 Main Features:
 - Adjust canvas size ("pixel size") of your canvas.
