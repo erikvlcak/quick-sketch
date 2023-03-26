@@ -28,11 +28,11 @@
 
                 <li class="option_size">
                     <i class='bx bx-expand-alt icon'></i>
-                    <span class="text">Adjust canvas size</span>
+                    <span class="text">Set canvas size</span>
                     <i class='bx bx-chevron-down arrow'></i>
                     <ul class="subOptions sub-hidden">
-                        <span class="option_size-value">Use slider</span>
                         <input type="range" class="range" id="range" min="2" max="100">
+                        <span class="option_size-value">Use slider</span>
                     </ul>
                 </li>
 
@@ -43,21 +43,21 @@
                     <ul class="subOptions sub-hidden">
                         <li class="subOptionPickColor">Pick color
                             <div class="colors sub-hidden">
-                                <div class="violet"></div>
-                                <div class="silver"></div>
-                                <div class="black"></div>
-                                <div class="red"></div>
-                                <div class="maroon"></div>
-                                <div class="yellow"></div>
-                                <div class="orange"></div>
-                                <div class="lime"></div>
-                                <div class="green"></div>
-                                <div class="teal"></div>
-                                <div class="aqua"></div>
-                                <div class="blue"></div>
-                                <div class="navy"></div>
-                                <div class="fuchsia"></div>
-                                <div class="purple"></div>
+                                <div class="violet" id="hsl(300, 76%, 72%)"></div>
+                                <div class="silver" id="hsl(0, 0%, 75%)"></div>
+                                <div class="black" id="hsl(0, 0%, 0%)"></div>
+                                <div class="red" id="hsl(0, 100%, 50%)"></div>
+                                <div class="maroon" id="hsl(0, 100%, 25%)"></div>
+                                <div class="yellow" id="hsl(60, 100%, 50%)"></div>
+                                <div class="orange" id="hsl(39, 100%, 50%)"></div>
+                                <div class="lime" id="hsl(120, 100%, 50%)"></div>
+                                <div class="green" id="hsl(120, 100%, 25%)"></div>
+                                <div class="aqua" id="hsl(180, 100%, 50%)"></div>
+                                <div class="teal" id="hsl(180, 100%, 25%)"></div>
+                                <div class="blue" id="hsl(240, 100%, 50%)"></div>
+                                <div class="navy" id="hsl(240, 100%, 25%)"></div>
+                                <div class="fuchsia" id="hsl(300, 100%, 50%)"></div>
+                                <div class="purple" id="hsl(300, 100%, 25%)"></div>
                             </div>
                         </li>
 
@@ -71,25 +71,17 @@
 
                 <li class="option_shading">
                     <i class='bx bx-adjust icon'></i>
-                    <span class="text">Shading technique</span>
+                    <span class="text">Shading options</span>
                     <i class='bx bx-chevron-down arrow'></i>
                     <ul class="subOptions sub-hidden">
                         <li class="subOptionDarker">Progressively darker</li>
                         <li class="subOptionLighter">Progressively lighter</li>
-                        <li class="subOptionShadingNone">None</li>
+
                     </ul>
                 </li>
 
 
-                <li class="option_input">
-                    <i class='bx bxs-paint icon'></i>
-                    <span class="text">Input style</span>
-                    <i class='bx bx-chevron-down arrow'></i>
-                    <ul class="subOptions sub-hidden">
-                        <li class="subOptionHover">Hover over canvas</li>
-                        <li class="subOptionDrag">Click and drag</li>
-                    </ul>
-                </li>
+
 
 
                 <li class="option_delete">
@@ -105,9 +97,11 @@
             </ul>
         </div>
         <div id="canvas">
-            <div class="canvasInitialMessage">Start by setting canvas size. <br> Canvas border has the same color as is
-                currently
-                selected. <br> Have fun!
+            <div class="canvasInitialMessage">Start by setting canvas size.
+                <div class="footer">Made by <a href="https://github.com/erikvlcak"><i class='bx bxl-github'></i></a><a
+                        href="https://github.com/erikvlcak"> Erik
+                        Vlcak</a>
+                </div>
             </div>
         </div>
     </div>
